@@ -19,4 +19,7 @@
     pip install pyinstaller
 ****
 ### pack
+    install.sh
     install.bat
+****
+    
