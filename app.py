@@ -1,5 +1,6 @@
 import sys
 
+from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QWidget, QApplication
 
 
@@ -10,6 +11,8 @@ class MyAppMainWindow(QWidget):
 
     def initUI(self):
         self.setWindowTitle("My First PyQt5 App")
+        self.setWindowIcon(QIcon('icon.ico'))
+        QIcon('')
         self.show()
 
 
