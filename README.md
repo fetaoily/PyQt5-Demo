@@ -6,6 +6,7 @@
     os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = plugin_path
 ****
     pip install pyqt5
+    pip install pyqt5-tools
     pip install pyinstaller
 ****
     install.bat
