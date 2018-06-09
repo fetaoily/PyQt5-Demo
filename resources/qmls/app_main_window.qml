@@ -7,6 +7,7 @@ ApplicationWindow {
     width:800
     height:600
     color: "#CFCFCF"
+    title: "PyQt5-Demo : " + Qt.application.version
 
 
     menuBar: MenuBar{}
@@ -19,15 +20,14 @@ ApplicationWindow {
             id: button1
             x: 12
             y: 4
-            property int counter: 0
-            text: qsTr("Button01")
+            text: qsTr("截图开始")
         }
 
         Button {
             id: button2
             x: 110
             y: 4
-            text: qsTr("Button02")
+            text: qsTr("截图结束")
         }
 
         Button {
@@ -108,20 +108,14 @@ ApplicationWindow {
     Connections {
         target: button1
         onClicked: {
-            button1.counter++
-            button1.text = "计数:"+button1.counter
-            print("clicked button1")
-            console.info(mainWindow)
-
+            con.screen_capture_start("start")
         }
     }
 
     Connections {
         target: button2
         onClicked:{
-            button2.text = Date().toString()
-            print("clicked button2")
-            mainWindow.title = button2.text
+            con.screen_capture_stop("stop")
         }
     }
 
