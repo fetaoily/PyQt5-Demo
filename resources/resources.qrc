@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/resources">
         <file>qmls/app_main_window.qml</file>
+        <file>images/minions.jpg</file>
     </qresource>
 </RCC>

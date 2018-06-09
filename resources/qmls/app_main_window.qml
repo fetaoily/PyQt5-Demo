@@ -29,7 +29,7 @@ ApplicationWindow {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
         minimumValue: 0
-        maximumValue: mainWindow.width
+        maximumValue: 48
     }
 
     SpinBox {
@@ -39,6 +39,15 @@ ApplicationWindow {
         width: 95
         anchors.horizontalCenter: parent.horizontalCenter
         value:sliderHorizontal.value
-        maximumValue: 10000
+        maximumValue: 48
+    }
+
+    Image {
+        id: image
+        x: 134
+        y: 113
+        width: 100
+        height: 100
+        source: "../images/minions.jpg"
     }
 }
