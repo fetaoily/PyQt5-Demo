@@ -31,4 +31,14 @@ ApplicationWindow {
         minimumValue: 0
         maximumValue: mainWindow.width
     }
+
+    SpinBox {
+        id: spinBox
+        x: 353
+        y: 182
+        width: 95
+        anchors.horizontalCenter: parent.horizontalCenter
+        value:sliderHorizontal.value
+        maximumValue: 10000
+    }
 }
