@@ -8,6 +8,40 @@ ApplicationWindow {
     height:600
     color: "#CFCFCF"
 
+    menuBar: MenuBar{}
+    toolBar: ToolBar{
+        Button {
+            id: button1
+            x: 12
+            y: 4
+            property int counter: 0
+            text: qsTr("Button01")
+        }
+
+        Button {
+            id: button2
+            x: 110
+            y: 4
+            text: qsTr("Button02")
+        }
+
+    }
+    statusBar: StatusBar{
+        id: statusBar1
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 0
+        Button {
+            id: statusBarBtn01
+            text: qsTr("状态栏")
+            anchors.left: parent.left
+            anchors.leftMargin: 1
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 1
+            anchors.top: parent.top
+            anchors.topMargin: 1
+        }
+    }
+
     Label {
         id: label
         color: "#df3333"
@@ -49,5 +83,30 @@ ApplicationWindow {
         width: 100
         height: 100
         source: "../images/minions.jpg"
+    }
+
+    Connections {
+        target: button1
+        onClicked: {
+            button1.counter++
+            button1.text = "计数:"+button1.counter
+            print("clicked button1")
+        }
+    }
+
+    Connections {
+        target: button2
+        onClicked:{
+            button2.text = Date().toString()
+            print("clicked button2")
+        }
+    }
+
+    Connections {
+        target: statusBarBtn01
+        onClicked:{
+            statusBarBtn01.text = "状态栏:"+Date().toString()
+             print("clicked")
+        }
     }
 }
