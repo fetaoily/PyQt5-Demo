@@ -34,7 +34,7 @@ ApplicationWindow {
             id: buttonFullScreen
             x: 204
             y: 4
-            text: qsTr("ShowFullScreen")
+            text: qsTr("全屏显示")
 
         }
 
@@ -42,7 +42,7 @@ ApplicationWindow {
             id: buttonShowNormal
             x: 313
             y: 4
-            text: qsTr("ShowNormal")
+            text: qsTr("退出全屏")
         }
 
     }
