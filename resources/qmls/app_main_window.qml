@@ -8,13 +8,9 @@ ApplicationWindow {
     height:600
     color: "#CFCFCF"
 
-
     Label {
         id: label
-
         color: "#df3333"
-
-
         text: qsTr("Label哈哈蛤嘻嘻嘻")
         anchors.top: parent.top
         anchors.topMargin: 100
@@ -22,7 +18,6 @@ ApplicationWindow {
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
         font.pointSize: sliderHorizontal.value
-
     }
 
     Slider {
@@ -30,11 +25,10 @@ ApplicationWindow {
         x: 133
         y: 165
         width: 564
-
         height: 22
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
         minimumValue: 0
         maximumValue: mainWindow.width
     }
-
-
 }
