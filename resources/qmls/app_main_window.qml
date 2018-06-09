@@ -8,8 +8,13 @@ ApplicationWindow {
     height:600
     color: "#CFCFCF"
 
+
     menuBar: MenuBar{}
     toolBar: ToolBar{
+        anchors.left: parent.left
+        anchors.leftMargin: 0
+        anchors.right: parent.right
+        anchors.rightMargin: 0
         Button {
             id: button1
             x: 12
@@ -23,6 +28,21 @@ ApplicationWindow {
             x: 110
             y: 4
             text: qsTr("Button02")
+        }
+
+        Button {
+            id: buttonFullScreen
+            x: 204
+            y: 4
+            text: qsTr("ShowFullScreen")
+
+        }
+
+        Button {
+            id: buttonShowNormal
+            x: 313
+            y: 4
+            text: qsTr("ShowNormal")
         }
 
     }
@@ -91,6 +111,8 @@ ApplicationWindow {
             button1.counter++
             button1.text = "计数:"+button1.counter
             print("clicked button1")
+            console.info(mainWindow)
+
         }
     }
 
@@ -99,6 +121,7 @@ ApplicationWindow {
         onClicked:{
             button2.text = Date().toString()
             print("clicked button2")
+            mainWindow.title = button2.text
         }
     }
 
@@ -106,7 +129,23 @@ ApplicationWindow {
         target: statusBarBtn01
         onClicked:{
             statusBarBtn01.text = "状态栏:"+Date().toString()
-             print("clicked")
+            print("clicked")
+        }
+    }
+
+    Connections {
+        target: buttonFullScreen
+        onClicked: {
+            mainWindow.showFullScreen()
+            print("clicked")
+        }
+    }
+
+    Connections {
+        target: buttonShowNormal
+        onClicked: {
+            mainWindow.showNormal()
+            print("clicked")
         }
     }
 }
