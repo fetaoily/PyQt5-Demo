@@ -107,3 +107,6 @@ venv.bak/
 .DS_Store
 PyQt5-Demo-SetupFiles/
 PyQt5-Demo-cache/
+.idea/
+app.spec
+resources/__pycache__/
