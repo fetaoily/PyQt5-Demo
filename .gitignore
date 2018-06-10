@@ -104,3 +104,6 @@ venv.bak/
 .mypy_cache/
 
 /.idea
+.DS_Store
+PyQt5-Demo-SetupFiles/
+PyQt5-Demo-cache/
